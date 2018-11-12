@@ -82,4 +82,4 @@ production:
   <<: *default
   database: backend-postgres_production
   username: backend-postgres
-  password: <%= ENV['BACKEND-POSTGRES_DATABASE_PASSWORD'] %>
+  password: backend-password

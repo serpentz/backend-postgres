@@ -1,8 +1,8 @@
 class PostsController < ApplicationController
     
   def index
-    # render json: Post.all
-    render "[]"
+    render json: Post.all
+    # render "[]"
   end
 
   def show

@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     end
   
     def create
-        render json: User.create(user_params)
+        render json: User.find_or_create_by(user_params)
     end
   
     def update

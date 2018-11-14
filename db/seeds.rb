@@ -23,7 +23,7 @@ data = JSON.parse(RestClient.get("https://www.reddit.com/r/memes/.json?count=90"
 
 
 data['data']['children'].each do |x|
-	if(x['type'])
+
 	 Post.find_or_create_by( text: x['data']['title'], url: x['data']['url'] )
 	end
 end

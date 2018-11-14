@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
     
   def index
+    test1=Post.all
     render json: Post.all
     # render "[]"
   end

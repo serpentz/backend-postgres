@@ -19,11 +19,11 @@ CategoryPost.create(post_id: 2, category_id: 2)
 SelectedMeme.create( user_id: 1, post_id: 1)
 SelectedMeme.create( user_id: 1, post_id: 2)
 
-data = JSON.parse(RestClient.get("https://www.reddit.com/top/.json?count=90").body)
+data = JSON.parse(RestClient.get("https://www.reddit.com/r/memes/.json?count=90").body)
 
 
 data['data']['children'].each do |x|
-
+	if(x['type'])
 	 Post.find_or_create_by( text: x['data']['title'], url: x['data']['url'] )
 	end
   

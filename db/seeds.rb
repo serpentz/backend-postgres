@@ -26,6 +26,5 @@ data['data']['children'].each do |x|
 
 	 Post.find_or_create_by( text: x['data']['title'], url: x['data']['url'] )
 	end
-end
   
 

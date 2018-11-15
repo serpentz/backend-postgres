@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
     
   def index
-
+    test1=Post.all
     render json: Post.all
     # render "[]"
   end
@@ -31,7 +31,7 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:text, :url, :user_id)
+    params.require(:post).permit(:text, :url)
   end
 
 end

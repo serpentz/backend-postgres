@@ -24,7 +24,7 @@ class PostsController < ApplicationController
   end
   
   
-  def addUser
+  def add
     binding.pry
     Post.find(params[:id]).users << User.find(params[:user_id])
     render json: Post.find(params[:id])

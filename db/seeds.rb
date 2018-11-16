@@ -8,10 +8,12 @@
 require 'rest-client'
 require 'json'
 require 'pry'
-User.create(name: "sample user")
+user = User.create(name: "sample user")
 
-Category.create(name: "girlfriend")
-Category.create(name: "minds")
+# Category.create(name: "girlfriend")
+# Category.create(name: "minds")
+post = Post.create(url:"url",text:'title',user_id: 1)
+binding.pry
 
 CategoryPost.create(post_id: 1, category_id: 1)
 CategoryPost.create(post_id: 2, category_id: 2)
